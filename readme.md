@@ -2,6 +2,7 @@
 
 > Convert a Source Map object to a comment
 
+Use [inline-source-map-comment](https://github.com/shinnn/inline-source-map-comment) if you need more options. (e.g. CSS source map support)
 
 ## Install
 
