@@ -1,0 +1,38 @@
+{
+  "name": "source-map-to-comment",
+  "version": "0.0.0",
+  "description": "Convert a Source Map object to a comment",
+  "license": "MIT",
+  "repository": "sindresorhus/source-map-to-comment",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "sourcemap",
+    "sourcemaps",
+    "source-map",
+    "source-maps",
+    "source",
+    "maps",
+    "map",
+    "convert",
+    "object",
+    "comment",
+    "inline",
+    "base64"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
