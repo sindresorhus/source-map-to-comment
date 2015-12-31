@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var sourceMapToComment = require('./');
+import test from 'ava';
+import fn from './';
 
-var sourceMapFixture = {
+const sourceMapFixture = {
 	version: 3,
 	file: 'index.css',
 	sources: [
@@ -13,7 +12,6 @@ var sourceMapFixture = {
 	names: []
 };
 
-test(function (t) {
-	t.assert(/\/\/# sourceMappingURL=data:application\/json;base64,\w+/.test(sourceMapToComment(sourceMapFixture)));
-	t.end();
+test(t => {
+	t.true(/\/\/# sourceMappingURL=data:application\/json;base64,\w+/.test(fn(sourceMapFixture)));
 });
