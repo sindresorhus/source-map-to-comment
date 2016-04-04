@@ -2,7 +2,6 @@
 
 > Convert a Source Map object to a comment
 
-Use [inline-source-map-comment](https://github.com/shinnn/inline-source-map-comment) if you need more options. (e.g. CSS source map support)
 
 ## Install
 
@@ -19,6 +18,9 @@ var sourceMap = getSourceMapFromSomething();
 
 sourceMapToComment(sourceMap);
 //=> '//# sourceMappingURL=data:application/json;base64,eyJ2Z...'
+
+sourceMapToComment(sourceMap, {type: 'css'});
+//=> '/*# sourceMappingURL=data:application/json;base64,eyJ2Z... */'
 ```
 
 

@@ -12,6 +12,16 @@ const sourceMapFixture = {
 	names: []
 };
 
-test(t => {
-	t.true(/\/\/# sourceMappingURL=data:application\/json;base64,\w+/.test(fn(sourceMapFixture)));
+test('main', t => {
+	t.regex(
+		fn(sourceMapFixture),
+		/\/\/# sourceMappingURL=data:application\/json;base64,\w+/
+	);
+});
+
+test('type option', t => {
+	t.regex(
+		fn(sourceMapFixture, {type: 'css'}),
+		/\*# sourceMappingURL=data:application\/json;base64,\w+ \*\//
+	);
 });
