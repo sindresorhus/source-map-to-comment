@@ -1,5 +1,5 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 const sourceMapFixture = {
 	version: 3,
@@ -14,14 +14,14 @@ const sourceMapFixture = {
 
 test('main', t => {
 	t.regex(
-		fn(sourceMapFixture),
+		m(sourceMapFixture),
 		/\/\/# sourceMappingURL=data:application\/json;base64,\w+/
 	);
 });
 
 test('type option', t => {
 	t.regex(
-		fn(sourceMapFixture, {type: 'css'}),
+		m(sourceMapFixture, {type: 'css'}),
 		/\*# sourceMappingURL=data:application\/json;base64,\w+ \*\//
 	);
 });
