@@ -19,6 +19,13 @@ test('main', t => {
 	);
 });
 
+test('string argument', t => {
+	t.is(
+		m(sourceMapFixture),
+		m(JSON.stringify(sourceMapFixture))
+	);
+});
+
 test('type option', t => {
 	t.regex(
 		m(sourceMapFixture, {type: 'css'}),
