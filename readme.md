@@ -14,9 +14,12 @@ $ npm install --save source-map-to-comment
 
 ```js
 const sourceMapToComment = require('source-map-to-comment');
-const sourceMap = getSourceMapFromSomething();
+const sourceMap = getSourceMapObjectFromSomething();
 
 sourceMapToComment(sourceMap);
+//=> '//# sourceMappingURL=data:application/json;base64,eyJ2Z...'
+
+sourceMapToComment(JSON.stringify(sourceMap));
 //=> '//# sourceMappingURL=data:application/json;base64,eyJ2Z...'
 
 sourceMapToComment(sourceMap, {type: 'css'});
