@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const sourceMapFixture = {
 	version: 3,
@@ -16,6 +16,13 @@ test('main', t => {
 	t.regex(
 		m(sourceMapFixture),
 		/\/\/# sourceMappingURL=data:application\/json;base64,\w+/
+	);
+});
+
+test('string argument', t => {
+	t.is(
+		m(sourceMapFixture),
+		m(JSON.stringify(sourceMapFixture))
 	);
 });
 
