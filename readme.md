@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save source-map-to-comment
+$ npm install source-map-to-comment
 ```
 
 
@@ -14,6 +14,7 @@ $ npm install --save source-map-to-comment
 
 ```js
 const sourceMapToComment = require('source-map-to-comment');
+
 const sourceMap = getSourceMapObjectFromSomething();
 
 sourceMapToComment(sourceMap);
@@ -25,8 +26,3 @@ sourceMapToComment(JSON.stringify(sourceMap));
 sourceMapToComment(sourceMap, {type: 'css'});
 //=> '/*# sourceMappingURL=data:application/json;base64,eyJ2Z... */'
 ```
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

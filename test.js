@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from '.';
+import sourceMapToComment from '.';
 
 const sourceMapFixture = {
 	version: 3,
@@ -14,21 +14,21 @@ const sourceMapFixture = {
 
 test('main', t => {
 	t.regex(
-		m(sourceMapFixture),
+		sourceMapToComment(sourceMapFixture),
 		/\/\/# sourceMappingURL=data:application\/json;base64,\w+/
 	);
 });
 
 test('string argument', t => {
 	t.is(
-		m(sourceMapFixture),
-		m(JSON.stringify(sourceMapFixture))
+		sourceMapToComment(sourceMapFixture),
+		sourceMapToComment(JSON.stringify(sourceMapFixture))
 	);
 });
 
 test('type option', t => {
 	t.regex(
-		m(sourceMapFixture, {type: 'css'}),
+		sourceMapToComment(sourceMapFixture, {type: 'css'}),
 		/\*# sourceMappingURL=data:application\/json;base64,\w+ \*\//
 	);
 });
