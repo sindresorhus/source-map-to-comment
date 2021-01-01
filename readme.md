@@ -1,4 +1,4 @@
-# source-map-to-comment [![Build Status](https://travis-ci.org/sindresorhus/source-map-to-comment.svg?branch=master)](https://travis-ci.org/sindresorhus/source-map-to-comment)
+# source-map-to-comment
 
 > Convert a Source Map object to a comment
 
