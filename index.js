@@ -1,12 +1,12 @@
-'use strict';
+import {Buffer} from 'node:buffer';
 
-module.exports = (sourceMap, options = {}) => {
+export default function sourceMapToComment(sourceMap, {type} = {}) {
 	const base64 = Buffer.from(typeof sourceMap === 'string' ? sourceMap : JSON.stringify(sourceMap)).toString('base64');
 	const contents = `sourceMappingURL=data:application/json;base64,${base64}`;
 
-	if (options.type === 'css') {
+	if (type === 'css') {
 		return `/*# ${contents} */`;
 	}
 
 	return `//# ${contents}`;
-};
+}

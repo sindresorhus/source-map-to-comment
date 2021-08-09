@@ -2,18 +2,16 @@
 
 > Convert a Source Map object to a comment
 
-
 ## Install
 
 ```
 $ npm install source-map-to-comment
 ```
 
-
 ## Usage
 
 ```js
-const sourceMapToComment = require('source-map-to-comment');
+import sourceMapToComment from 'source-map-to-comment';
 
 const sourceMap = getSourceMapObjectFromSomething();
 
